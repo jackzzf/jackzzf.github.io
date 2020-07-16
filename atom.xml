@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackzzf.github.io/</id>
     <title>Jack</title>
-    <updated>2020-07-15T12:58:16.603Z</updated>
+    <updated>2020-07-16T12:36:06.466Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackzzf.github.io/"/>
     <link rel="self" href="https://jackzzf.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://jackzzf.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Jack</rights>
     <entry>
-        <title type="html"><![CDATA[Spring Boot && Dubbo && Zookeeper]]></title>
+        <title type="html"><![CDATA[Dubbo && Zookeeper]]></title>
         <id>https://jackzzf.github.io/post/spring-boot-and-dubbo-and-zookeeper/</id>
         <link href="https://jackzzf.github.io/post/spring-boot-and-dubbo-and-zookeeper/">
         </link>
@@ -70,7 +70,23 @@
 </ul>
 <h3 id="3-dubbo-环境搭建">3. Dubbo 环境搭建</h3>
 <h4 id="31-win安装zookeeper">3.1 win安装zookeeper</h4>
+<pre><code class="language-java">1. 官网下载Zookeeper；
+2. 将conf文件夹下的zoo_simple.cfg复制一份并改名为zoo.cfg；
+3. zoo.cfg文件中的配置：
+    dataDir=../data  // 临时数据存储目录（zoo.cfg所在文件夹的上一级目录下的data文件夹）
+    clientPort=2181 // zookeeper的端口号
+4. 修改完成后运行bin目录下的zkServer.cmd；
+5. 运行bin目录下的zkCli.cmd进行测试；
+</code></pre>
 <h4 id="32-win安装dubbo-admin管理控制台">3.2 win安装dubbo-admin管理控制台</h4>
+<pre><code class="language-java">1. 下载dubbo-admin：https://github.com/apache/incubator-dubbo-ops
+2. 解压完成后，进入/dubbo-admin/src/main/resources/application.properties，修改配置：
+    dubbo.registry.address=zookeeper://127.0.0.1:2181
+3. 进入dubbo-admin目录，使用cmd命令：mvn clean package
+4. 进入target目录下，使用cmd命运运行：java -jar dubbo-admin-0.0.1-SNAPSHOT.jar
+5. 浏览器输入：localhost:7001，进入dubbo管理控制台，默认账号密码都是root；
+</code></pre>
+<figure data-type="image" tabindex="7"><img src="https://jackzzf.github.io//post-images/1594902731955.jpg" alt="dubbo-admin" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
