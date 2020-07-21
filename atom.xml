@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackzzf.github.io/</id>
     <title>Jack</title>
-    <updated>2020-07-16T12:36:06.466Z</updated>
+    <updated>2020-07-21T09:30:11.551Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackzzf.github.io/"/>
     <link rel="self" href="https://jackzzf.github.io/atom.xml"/>
@@ -10,6 +10,47 @@
     <logo>https://jackzzf.github.io/images/avatar.png</logo>
     <icon>https://jackzzf.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Jack</rights>
+    <entry>
+        <title type="html"><![CDATA[spring--静态/动态代理模式]]></title>
+        <id>https://jackzzf.github.io/post/spring-jing-tai-dong-tai-dai-li-mo-shi/</id>
+        <link href="https://jackzzf.github.io/post/spring-jing-tai-dong-tai-dai-li-mo-shi/">
+        </link>
+        <updated>2020-07-21T09:10:27.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>静态代理</li>
+</ol>
+<figure data-type="image" tabindex="1"><img src="https://jackzzf.github.io//post-images/1595322736529.jpg" alt="静态代理" loading="lazy"></figure>
+<ul>
+<li>抽象角色：一般使用接口或者抽象类来实现；</li>
+<li>真实角色：被代理的角色；</li>
+<li>代理角色：代理真实角色，代理真实角色后，一般会做一些附属的操作；</li>
+<li>客户：使用代理角色来进行一些操作；</li>
+</ul>
+<pre><code class="language-java">// 租房：抽象角色
+public interface Rent {
+    public void rent();
+}
+
+// 房东：真实角色
+public class Host implements Rent {
+    // 房东要出租房屋
+    public void rent() {
+        System.out.pringtln(&quot;房屋出租&quot;);
+    }
+} 
+
+// 中介：代理角色
+public class Proxy implements Rent {
+    public Host host;
+    public Proxy() {}
+    public Proxy(Host host) {
+        this.host = host;
+    }
+}
+
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Dubbo && Zookeeper]]></title>
         <id>https://jackzzf.github.io/post/spring-boot-and-dubbo-and-zookeeper/</id>
