@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackzzf.github.io/</id>
     <title>Jack</title>
-    <updated>2020-07-22T07:58:52.538Z</updated>
+    <updated>2020-07-29T06:49:03.426Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackzzf.github.io/"/>
     <link rel="self" href="https://jackzzf.github.io/atom.xml"/>
@@ -10,6 +10,52 @@
     <logo>https://jackzzf.github.io/images/avatar.png</logo>
     <icon>https://jackzzf.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Jack</rights>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu更换镜像源]]></title>
+        <id>https://jackzzf.github.io/post/ubuntu-geng-huan-jing-xiang-yuan/</id>
+        <link href="https://jackzzf.github.io/post/ubuntu-geng-huan-jing-xiang-yuan/">
+        </link>
+        <updated>2020-07-29T06:17:22.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="1-查看源模板">1. 查看源模板</h3>
+<ul>
+<li>进入此网站<code>https://wiki.ubuntu.org.cn/%E6%A8%A1%E6%9D%BF:18.04source</code>，查看源模板；</li>
+</ul>
+<h3 id="2-获取-ubuntu-代号">2. 获取 Ubuntu 代号</h3>
+<ul>
+<li>终端输入，Codename 后面的就是代号；</li>
+</ul>
+<pre><code class="language-java">lsb_release -a
+</code></pre>
+<pre><code class="language-java">No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04.4 LTS
+Release:	    18.04
+Codename:	    bionic
+</code></pre>
+<h3 id="3-编辑源">3. 编辑源</h3>
+<ul>
+<li>将途中<strong>蓝色连接</strong>换为对应的阿里云或者清华源，并将每个连接后面的<strong>代号</strong>换为自己系统对应的代号</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://jackzzf.github.io//post-images/1596004797979.jpg" alt="镜像源" loading="lazy"></figure>
+<h3 id="4-修改源文件-sourceslist">4. 修改源文件 sources.list</h3>
+<ul>
+<li>先备份源文件</li>
+</ul>
+<pre><code class="language-java">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bcakup
+</code></pre>
+<ul>
+<li>使用gedit编辑源文件，清空里面内容，并将第3步中编辑好的源代码复制进去，保存并退出；</li>
+</ul>
+<pre><code class="language-java">sudo gedit /etc/apt/sources.list
+</code></pre>
+<h3 id="5-更新软件列表和升级">5. 更新软件列表和升级</h3>
+<pre><code class="language-java">// 更新软件列表
+sudo apt-get update
+// 更新软件
+sudo apt-get upgrade
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[spring--静态/动态代理模式]]></title>
         <id>https://jackzzf.github.io/post/spring-jing-tai-dong-tai-dai-li-mo-shi/</id>
