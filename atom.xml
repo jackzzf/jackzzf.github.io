@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackzzf.github.io/</id>
     <title>Jack</title>
-    <updated>2020-08-03T09:15:27.990Z</updated>
+    <updated>2020-08-10T01:40:35.143Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackzzf.github.io/"/>
     <link rel="self" href="https://jackzzf.github.io/atom.xml"/>
@@ -10,6 +10,86 @@
     <logo>https://jackzzf.github.io/images/avatar.png</logo>
     <icon>https://jackzzf.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Jack</rights>
+    <entry>
+        <title type="html"><![CDATA[使用 navicat 连接 Linux 的 mysql 出现的 1251 错误代码]]></title>
+        <id>https://jackzzf.github.io/post/shi-yong-navicat-lian-jie-linux-de-mysql-chu-xian-de-1251-cuo-wu-dai-ma/</id>
+        <link href="https://jackzzf.github.io/post/shi-yong-navicat-lian-jie-linux-de-mysql-chu-xian-de-1251-cuo-wu-dai-ma/">
+        </link>
+        <updated>2020-08-10T01:39:24.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="使用-navicat-连接-linux-的-mysql-出现的-1251-错误代码">使用 navicat 连接 Linux 的 mysql 出现的 1251 错误代码</h3>
+<ol>
+<li>首先进入容器</li>
+</ol>
+<pre><code class="language-shell">docker exec -it mysql01 bash  (mysql01为容器名)
+</code></pre>
+<ol start="2">
+<li>登陆mysql</li>
+</ol>
+<pre><code class="language-mysql">mysql -u root -p
+Enter password:
+</code></pre>
+<ol start="3">
+<li>修改加密规则</li>
+</ol>
+<pre><code class="language-mysql">use mysql;
+
+# 最后引号是密码，%代表任意ip，也可修改为某个ip
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
+
+# 刷新权限表
+flush privileges;
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[访问Tomcat容器报错解决办法]]></title>
+        <id>https://jackzzf.github.io/post/fang-wen-tomcat-rong-qi-bao-cuo-jie-jue-ban-fa/</id>
+        <link href="https://jackzzf.github.io/post/fang-wen-tomcat-rong-qi-bao-cuo-jie-jue-ban-fa/">
+        </link>
+        <updated>2020-08-10T01:38:06.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>启动Tomcat容器</li>
+</ul>
+<pre><code class="language-shell">docker run -d -p 8888:8080 tomcat
+</code></pre>
+<ul>
+<li>查看已启用的容器</li>
+</ul>
+<pre><code class="language-shell">docker ps
+</code></pre>
+<ul>
+<li>查看防火墙状态</li>
+</ul>
+<pre><code class="language-shell">service firewalld status
+</code></pre>
+<ul>
+<li>若开启，则关闭</li>
+</ul>
+<pre><code class="language-shell">service firewalld stop
+</code></pre>
+<ul>
+<li>此时再访问还是报错：则说明webapps文件夹里面没有内容</li>
+</ul>
+<pre><code class="language-shell">docker exec -it 容器id /bin/bash
+
+ls -l
+
+cd webapps
+
+ls -l
+
+# 文件夹内没有内容，显示total 0
+
+cd ..
+
+rm -rf webapps
+
+mv webapps.dist webapps
+
+# 此时访问即可
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Ubuntu常用命令]]></title>
         <id>https://jackzzf.github.io/post/ubuntu-chang-yong-ming-ling/</id>
