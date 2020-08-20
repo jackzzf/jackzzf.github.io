@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackzzf.github.io/</id>
     <title>Jack</title>
-    <updated>2020-08-10T01:40:35.143Z</updated>
+    <updated>2020-08-20T01:03:12.261Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackzzf.github.io/"/>
     <link rel="self" href="https://jackzzf.github.io/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://jackzzf.github.io/images/avatar.png</logo>
     <icon>https://jackzzf.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Jack</rights>
+    <entry>
+        <title type="html"><![CDATA[华为机试题]]></title>
+        <id>https://jackzzf.github.io/post/hua-wei-ji-shi-ti/</id>
+        <link href="https://jackzzf.github.io/post/hua-wei-ji-shi-ti/">
+        </link>
+        <updated>2020-08-20T00:45:22.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="1-取近似值">1. 取近似值</h3>
+<blockquote>
+<p>写出一个程序，接受一个正浮点数值，输出该数值的近似整数值。如果小数点后数值大于等于 5, 向上取整；小于 5，则向下取整。</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用 navicat 连接 Linux 的 mysql 出现的 1251 错误代码]]></title>
         <id>https://jackzzf.github.io/post/shi-yong-navicat-lian-jie-linux-de-mysql-chu-xian-de-1251-cuo-wu-dai-ma/</id>
