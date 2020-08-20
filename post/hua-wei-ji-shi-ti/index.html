@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>华为机试题 | Jack</title>
-<link rel="shortcut icon" href="https://jackzzf.github.io//favicon.ico?v=1597907434155">
+<link rel="shortcut icon" href="https://jackzzf.github.io//favicon.ico?v=1597912361266">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://jackzzf.github.io//styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="华为机试题 | Jack - Atom Feed" href="https://jackzzf.github.io//atom.xml">
@@ -26,7 +26,7 @@ public class Main() {
       <div class="main-content">
         <div class="site-header">
   <a href="https://jackzzf.github.io/">
-  <img class="avatar" src="https://jackzzf.github.io//images/avatar.png?v=1597907434155" alt="">
+  <img class="avatar" src="https://jackzzf.github.io//images/avatar.png?v=1597912361266" alt="">
   </a>
   <h1 class="site-title">
     Jack
@@ -90,7 +90,7 @@ public class Main() {
                 2020-08-20
               </span>
               <span>
-                2 min read
+                3 min read
               </span>
               
             </div>
@@ -155,6 +155,40 @@ public class Main{
     }
 }
 </code></pre>
+<h3 id="4-放苹果">4. 放苹果</h3>
+<blockquote>
+<p>把 M 个同样的苹果放在 N 个同样的盘子里，允许有的盘子空着不放，问共有多少种不同的分法？（用 K 表示）5，1，1 和 1，5，1 是同一种分法。</p>
+</blockquote>
+<pre><code class="language-java">import java.util.Scanner;
+
+/*
+    当n&gt;m：必定有n-m个盘子永远空着，去掉它们对摆放苹果方法数目不产生影响。即if(n&gt;m) f(m,n) = f(m,m)　　
+    当n&lt;=m：不同的放法可以分成两类：
+        1、有至少一个盘子空着，即相当于f(m,n) = f(m,n-1); 
+        2、所有盘子都有苹果，相当于可以从每个盘子中拿掉一个苹果，不影响不同放法的数目，即f(m,n) = f(m-n,n).
+    而总的放苹果的放法数目等于两者的和，即 f(m,n) =f(m,n-1)+f(m-n,n)
+*/
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while(sc.hasNextInt()) {
+            System.out.println(count(sc.nextInt(),sc.nextInt()));
+        }
+        sc.close();
+    }
+    
+    public static int count(int m, int n){
+        if(m&lt;0||n&lt;=0) return 0;
+        // 当n=1时，所有苹果都必须放在一个盘子里，所以返回１；
+        // 当m=1时，只有一个苹果，所以返回1；
+        // 当m=0时，只有空盘，所以返回1；
+        if(m==1||n==1||m==0) return 1;
+        
+        return count(m,n-1)+count(m-n,n);
+    }
+}
+</code></pre>
 
               </div>
               <div class="toc-container">
@@ -166,6 +200,7 @@ public class Main{
 <li><a href="#1-%E5%8F%96%E8%BF%91%E4%BC%BC%E5%80%BC">1. 取近似值</a></li>
 <li><a href="#2-%E6%B1%82int%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E5%AD%98%E5%82%A8%E6%97%B61%E7%9A%84%E4%B8%AA%E6%95%B0">2. 求int型数据在内存中存储时1的个数</a></li>
 <li><a href="#3-%E6%95%B0%E5%AD%97%E9%A2%A0%E5%80%92">3. 数字颠倒</a></li>
+<li><a href="#4-%E6%94%BE%E8%8B%B9%E6%9E%9C">4. 放苹果</a></li>
 </ul>
 </li>
 </ul>
