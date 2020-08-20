@@ -2,24 +2,24 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ubuntu常用命令 | Jack</title>
+<title>charAt()方法 | Jack</title>
 <link rel="shortcut icon" href="https://jackzzf.github.io//favicon.ico?v=1597892646198">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://jackzzf.github.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Ubuntu常用命令 | Jack - Atom Feed" href="https://jackzzf.github.io//atom.xml">
+<link rel="alternate" type="application/atom+xml" title="charAt()方法 | Jack - Atom Feed" href="https://jackzzf.github.io//atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="1. deb文件安装
+    <meta name="description" content="
+charAt() 方法用于返回指定索引处的字符。索引范围为从 0 到 length()-1。
 
-sudo dpkg -i &lt;deb文件名&gt;
+public char charAt(int index)       // index为字符的索引
 
-2. 授予最高权限
 
-chmod -R 777 &lt;文件夹路径&gt;
+实例：
 
-..." />
+public class ..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -86,11 +86,11 @@ chmod -R 777 &lt;文件夹路径&gt;
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Ubuntu常用命令
+              charAt()方法
             </h2>
             <div class="post-info">
               <span>
-                2020-08-03
+                2020-08-20
               </span>
               <span>
                 1 min read
@@ -100,30 +100,28 @@ chmod -R 777 &lt;文件夹路径&gt;
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h3 id="1-deb文件安装">1. deb文件安装</h3>
-<ul>
-<li>sudo dpkg -i &lt;deb文件名&gt;</li>
+                <ul>
+<li><code>charAt()</code> 方法用于返回指定索引处的字符。索引范围为从 <code>0</code> 到 <code>length()-1</code>。</li>
 </ul>
-<h3 id="2-授予最高权限">2. 授予最高权限</h3>
+<pre><code class="language-java">public char charAt(int index)       // index为字符的索引
+</code></pre>
 <ul>
-<li>chmod -R 777 &lt;文件夹路径&gt;</li>
+<li>实例：</li>
 </ul>
+<pre><code class="language-java">public class Main{
+    public static void main(String[] args) {
+        String s = &quot;www.jack.com&quot;;
+        char c = s.charAt(5);
+        System.out.print(c);
+    }
+}
+
+// 输出结果为：a
+</code></pre>
 
               </div>
               <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#1-deb%E6%96%87%E4%BB%B6%E5%AE%89%E8%A3%85">1. deb文件安装</a></li>
-<li><a href="#2-%E6%8E%88%E4%BA%88%E6%9C%80%E9%AB%98%E6%9D%83%E9%99%90">2. 授予最高权限</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
+                
               </div>
             </div>
           </article>
@@ -132,9 +130,9 @@ chmod -R 777 &lt;文件夹路径&gt;
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://jackzzf.github.io/post/ubuntu-geng-huan-jing-xiang-yuan/">
+            <a href="https://jackzzf.github.io/post/jiang-shi-jin-zhi-zhuan-huan-cheng-2816-jin-zhi/">
               <h3 class="post-title">
-                Ubuntu更换镜像源
+                将十进制转换成2/8/16进制
               </h3>
             </a>
           </div>

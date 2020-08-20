@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>华为机试题 | Jack</title>
-<link rel="shortcut icon" href="https://jackzzf.github.io//favicon.ico?v=1597886020822">
+<link rel="shortcut icon" href="https://jackzzf.github.io//favicon.ico?v=1597892646198">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://jackzzf.github.io//styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="华为机试题 | Jack - Atom Feed" href="https://jackzzf.github.io//atom.xml">
@@ -26,7 +26,7 @@ public class Main() {
       <div class="main-content">
         <div class="site-header">
   <a href="https://jackzzf.github.io/">
-  <img class="avatar" src="https://jackzzf.github.io//images/avatar.png?v=1597886020822" alt="">
+  <img class="avatar" src="https://jackzzf.github.io//images/avatar.png?v=1597892646198" alt="">
   </a>
   <h1 class="site-title">
     Jack
@@ -90,7 +90,7 @@ public class Main() {
                 2020-08-20
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
               
             </div>
@@ -111,6 +111,50 @@ public class Main() {
     }
 }
 </code></pre>
+<h3 id="2-求int型数据在内存中存储时1的个数">2. 求int型数据在内存中存储时1的个数</h3>
+<blockquote>
+<p>输入一个 int 型的正整数，计算出该 int 型数据在内存中存储时 1 的个数。</p>
+</blockquote>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        String s = Integer.toBinaryString(num);
+        num = 0;
+        for(int i = 0; i &lt; s.length(); i++) {
+            if(s.charAt(i) == '1') {
+                num++;
+            }
+        }
+        System.out.println(num);
+    }
+}
+</code></pre>
+<h3 id="3-数字颠倒">3. 数字颠倒</h3>
+<blockquote>
+<p>输入一个整数，将这个整数以字符串的形式逆序输出，程序不考虑负数的情况，若数字含有 0，则逆序形式也含有 0，如输入为 100，则输出为 001</p>
+</blockquote>
+<pre><code class="language-java">import java.util.Scanner;
+import java.lang.String;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        String res = &quot;&quot;;
+        
+        while(num!=0) {
+            int t1=num%10;
+            int t2=num/10;
+            res+=String.valueOf(t1);
+            num=t2;
+        }
+        System.out.println(res);
+    }
+}
+</code></pre>
 
               </div>
               <div class="toc-container">
@@ -120,6 +164,8 @@ public class Main() {
 <li>
 <ul>
 <li><a href="#1-%E5%8F%96%E8%BF%91%E4%BC%BC%E5%80%BC">1. 取近似值</a></li>
+<li><a href="#2-%E6%B1%82int%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E5%AD%98%E5%82%A8%E6%97%B61%E7%9A%84%E4%B8%AA%E6%95%B0">2. 求int型数据在内存中存储时1的个数</a></li>
+<li><a href="#3-%E6%95%B0%E5%AD%97%E9%A2%A0%E5%80%92">3. 数字颠倒</a></li>
 </ul>
 </li>
 </ul>
