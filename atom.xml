@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackzzf.github.io/</id>
     <title>Jack</title>
-    <updated>2020-08-20T01:04:58.439Z</updated>
+    <updated>2020-08-20T01:13:45.541Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackzzf.github.io/"/>
     <link rel="self" href="https://jackzzf.github.io/atom.xml"/>
@@ -20,6 +20,16 @@
 <blockquote>
 <p>写出一个程序，接受一个正浮点数值，输出该数值的近似整数值。如果小数点后数值大于等于 5, 向上取整；小于 5，则向下取整。</p>
 </blockquote>
+<pre><code class="language-java">public class Main() {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while(sc.hasNextDouble) {
+            double l = sc.nextDouble();
+            System.out.println(Math.round(l));
+        }
+    }
+}
+</code></pre>
 ]]></content>
     </entry>
     <entry>

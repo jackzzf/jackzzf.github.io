@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>华为机试题 | Jack</title>
-<link rel="shortcut icon" href="https://jackzzf.github.io//favicon.ico?v=1597885472018">
+<link rel="shortcut icon" href="https://jackzzf.github.io//favicon.ico?v=1597886020822">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://jackzzf.github.io//styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="华为机试题 | Jack - Atom Feed" href="https://jackzzf.github.io//atom.xml">
@@ -15,7 +15,8 @@
 
 写出一个程序，接受一个正浮点数值，输出该数值的近似整数值。如果小数点后数值大于等于 5, 向上取整；小于 5，则向下取整。
 
-..." />
+public class Main() {
+    public static void mai..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -25,7 +26,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://jackzzf.github.io/">
-  <img class="avatar" src="https://jackzzf.github.io//images/avatar.png?v=1597885472018" alt="">
+  <img class="avatar" src="https://jackzzf.github.io//images/avatar.png?v=1597886020822" alt="">
   </a>
   <h1 class="site-title">
     Jack
@@ -100,6 +101,16 @@
 <blockquote>
 <p>写出一个程序，接受一个正浮点数值，输出该数值的近似整数值。如果小数点后数值大于等于 5, 向上取整；小于 5，则向下取整。</p>
 </blockquote>
+<pre><code class="language-java">public class Main() {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while(sc.hasNextDouble) {
+            double l = sc.nextDouble();
+            System.out.println(Math.round(l));
+        }
+    }
+}
+</code></pre>
 
               </div>
               <div class="toc-container">
