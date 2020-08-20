@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackzzf.github.io/</id>
     <title>Jack</title>
-    <updated>2020-08-20T03:04:09.217Z</updated>
+    <updated>2020-08-20T07:12:23.353Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackzzf.github.io/"/>
     <link rel="self" href="https://jackzzf.github.io/atom.xml"/>
@@ -10,6 +10,44 @@
     <logo>https://jackzzf.github.io/images/avatar.png</logo>
     <icon>https://jackzzf.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Jack</rights>
+    <entry>
+        <title type="html"><![CDATA[valueOf () 方法]]></title>
+        <id>https://jackzzf.github.io/post/valueof-fang-fa/</id>
+        <link href="https://jackzzf.github.io/post/valueof-fang-fa/">
+        </link>
+        <updated>2020-08-20T07:08:54.000Z</updated>
+        <content type="html"><![CDATA[<p>valueOf () 方法有以下几种不同形式：</p>
+<ul>
+<li>
+<p><code>valueOf(boolean b)</code>: 返回 boolean 参数的字符串表示形式。.</p>
+</li>
+<li>
+<p><code>valueOf(char c)</code>: 返回 char 参数的字符串表示形式。</p>
+</li>
+<li>
+<p><code>valueOf(char[] data)</code>: 返回 char 数组参数的字符串表示形式。</p>
+</li>
+<li>
+<p><code>valueOf(char[] data, int offset, int count)</code>: 返回 char 数组参数的特定子数组的字符串表示形式。</p>
+</li>
+<li>
+<p><code>valueOf(double d)</code>: 返回 double 参数的字符串表示形式。</p>
+</li>
+<li>
+<p><code>valueOf(float f)</code>: 返回 float 参数的字符串表示形式。</p>
+</li>
+<li>
+<p><code>valueOf(int i)</code>: 返回 int 参数的字符串表示形式。</p>
+</li>
+<li>
+<p><code>valueOf(long l)</code>: 返回 long 参数的字符串表示形式。</p>
+</li>
+<li>
+<p><code>valueOf(Object obj)</code>: 返回 Object 参数的字符串表示形式。</p>
+</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[charAt()方法]]></title>
         <id>https://jackzzf.github.io/post/charatfang-fa/</id>
